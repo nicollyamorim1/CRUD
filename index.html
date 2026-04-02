@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinanJS - Controle Financeiro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>💰 FinanJS</h1>
+    </header>
+
+    <main class="container">
+        <section class="resumo">
+            <div class="card">
+                <h3>Entradas</h3>
+                <p id="total-entradas" class="valor entrada">R$ 0,00</p>
+            </div>
+            <div class="card">
+                <h3>Saídas</h3>
+                <p id="total-saidas" class="valor saida">R$ 0,00</p>
+            </div>
+            <div class="card total">
+                <h3>Saldo Atual</h3>
+                <p id="saldo-total" class="valor">R$ 0,00</p>
+            </div>
+        </section>
+
+        <section class="cadastro">
+            <form id="form-transacao">
+                <input type="text" id="descricao" placeholder="Descrição (ex: Aluguel)" required>
+                <input type="number" id="valor" placeholder="Valor (R$)" step="0.01" required>
+                <select id="tipo">
+                    <option value="entrada">Entrada</option>
+                    <option value="saida">Saída</option>
+                </select>
+                <button type="submit">Adicionar</button>
+            </form>
+        </section>
+
+        <section class="extrato">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                        <th>Tipo</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody id="lista-transacoes">
+                    </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
